@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class ProductDetailViewController: UIViewController {
 
@@ -16,10 +17,10 @@ final class ProductDetailViewController: UIViewController {
     @IBOutlet weak var productProviderLabel: UILabel!
     @IBOutlet weak var productCategoryLabel: UILabel!
     @IBOutlet weak var productStockLabel: UILabel!
-
+    
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-
+    
     var selectedProductID: NSManagedObjectID?
 
     private var products: [ProductEntity] = []
@@ -58,7 +59,10 @@ final class ProductDetailViewController: UIViewController {
 
     private func loadProducts() {
         products = ProductRepository.shared.fetchAllProducts()
-
+        
+        print("Loaded products count: \(products.count)")
+        print("Current index: \(currentIndex)")
+        
         guard !products.isEmpty else {
             clearLabels()
             previousButton.isEnabled = false
@@ -81,12 +85,12 @@ final class ProductDetailViewController: UIViewController {
 
         let product = products[index]
 
-        productIdLabel.text = product.productId.uuidString
-        productNameLabel.text = product.productName
-        productDescriptionLabel.text = product.productDescription
+        productIdLabel.text = product.productId?.uuidString ?? "-"
+        productNameLabel.text = product.productName ?? "-"
+        productDescriptionLabel.text = product.productDescription ?? "-"
         productPriceLabel.text = formattedPrice(product.productPrice)
-        productProviderLabel.text = product.productProvider
-        productCategoryLabel.text = product.productCategory
+        productProviderLabel.text = product.productProvider ?? "-"
+        productCategoryLabel.text = product.productCategory ?? "-"
         productStockLabel.text = product.productStockQty == 0 ? "Out of Stock" : "\(product.productStockQty)"
 
         updateNavigationButtons()
@@ -107,7 +111,9 @@ final class ProductDetailViewController: UIViewController {
         productStockLabel.text = "-"
     }
 
-    private func formattedPrice(_ price: NSDecimalNumber) -> String {
+    private func formattedPrice(_ price: NSDecimalNumber?) -> String {
+        guard let price = price else { return "-" }
+
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
@@ -115,14 +121,16 @@ final class ProductDetailViewController: UIViewController {
     }
 
     @IBAction func previousTapped(_ sender: UIButton) {
+        print("Previous tapped")
         guard currentIndex > 0 else { return }
         currentIndex -= 1
         displayProduct(at: currentIndex)
     }
-
+    
     @IBAction func nextTapped(_ sender: UIButton) {
-        guard currentIndex < products.count - 1 else { return }
-        currentIndex += 1
-        displayProduct(at: currentIndex)
+        print("Next tapped")
+            guard currentIndex < products.count - 1 else { return }
+            currentIndex += 1
+            displayProduct(at: currentIndex)
     }
 }

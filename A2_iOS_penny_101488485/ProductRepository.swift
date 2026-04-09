@@ -63,7 +63,7 @@ final class ProductRepository {
         product.productPrice = NSDecimalNumber(decimal: price)
         product.productProvider = provider
         product.productCategory = category
-        product.productStockQty = stockQty
+        product.productStockQty = Int32(stockQty)
 
         return saveContext()
     }
