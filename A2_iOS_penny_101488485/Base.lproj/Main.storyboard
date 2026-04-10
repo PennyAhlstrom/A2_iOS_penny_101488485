@@ -227,7 +227,13 @@
                             <outlet property="delegate" destination="FtF-DP-AIL" id="DRC-oz-Rnr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="All Products" id="uvP-uu-4oP"/>
+                    <navigationItem key="navigationItem" title="All Products" id="uvP-uu-4oP">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="kWs-h5-GEq">
+                            <connections>
+                                <segue destination="p7h-Sb-7d6" kind="presentation" id="8sa-ak-KFP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVo-7Z-YJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,6 +341,9 @@
             <point key="canvasLocation" x="-51.145038167938928" y="1405.6338028169014"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8sa-ak-KFP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
