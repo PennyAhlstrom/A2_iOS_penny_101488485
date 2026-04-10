@@ -241,6 +241,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Product" id="KJc-EN-unK">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="l2p-M3-gSG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="S8X-Wp-Y6E"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfB-7h-E41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
