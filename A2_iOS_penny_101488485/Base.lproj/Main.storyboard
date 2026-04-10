@@ -143,7 +143,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Product Details" id="E5B-Ek-53V">
-                        <barButtonItem key="leftBarButtonItem" title="All" id="aue-Pv-yEe"/>
+                        <barButtonItem key="leftBarButtonItem" title="All" id="aue-Pv-yEe">
+                            <connections>
+                                <segue destination="FtF-DP-AIL" kind="show" id="7Ae-dI-X47"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="gyk-S6-whQ"/>
                     </navigationItem>
                     <connections>
@@ -179,6 +183,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUB-Uf-CUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="156.4885496183206" y="111.9718309859155"/>
+        </scene>
+        <!--All Products-->
+        <scene sceneID="BoV-RL-b6u">
+            <objects>
+                <tableViewController storyboardIdentifier="ProductListViewController" title="All Products" id="FtF-DP-AIL" customClass="ProductListViewController" customModule="A2_iOS_penny_101488485" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VKc-MT-bdR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" textLabel="Xcq-bD-iQb" detailTextLabel="pf5-W9-eGs" style="IBUITableViewCellStyleSubtitle" id="p4Y-oL-Wzm">
+                                <rect key="frame" x="0.0" y="50" width="393" height="51"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p4Y-oL-Wzm" id="mn1-jE-qUx">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xcq-bD-iQb">
+                                            <rect key="frame" x="20" y="8" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pf5-W9-eGs">
+                                            <rect key="frame" x="19.999999999999996" y="24.333333333333336" width="52.666666666666664" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FtF-DP-AIL" id="Ogh-E1-IgO"/>
+                            <outlet property="delegate" destination="FtF-DP-AIL" id="DRC-oz-Rnr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Products" id="uvP-uu-4oP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVo-7Z-YJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="759"/>
         </scene>
     </scenes>
     <resources>
