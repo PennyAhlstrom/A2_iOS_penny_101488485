@@ -291,6 +291,14 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="l2p-M3-gSG"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="S8X-Wp-Y6E"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="categoryTextField" destination="UV8-Uk-7OP" id="THk-nk-ilQ"/>
+                        <outlet property="descriptionTextView" destination="R37-o7-fgU" id="GxU-Sm-sGf"/>
+                        <outlet property="nameTextField" destination="atM-iR-voT" id="Hku-f0-Zrs"/>
+                        <outlet property="priceTextField" destination="Er1-iK-NlN" id="80W-J0-qft"/>
+                        <outlet property="providerTextField" destination="rbU-qb-iKn" id="NQP-NA-xuh"/>
+                        <outlet property="stockQtyTextField" destination="5VK-AS-qbm" id="pfB-ws-RD3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfB-7h-E41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
