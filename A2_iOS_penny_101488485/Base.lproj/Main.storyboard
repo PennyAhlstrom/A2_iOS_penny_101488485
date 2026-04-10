@@ -229,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="447" y="759"/>
         </scene>
-        <!--Add Product View Controller-->
+        <!--Add Product-->
         <scene sceneID="kAr-H5-TX6">
             <objects>
                 <viewController storyboardIdentifier="AddProductViewController" id="7sY-Dy-TrW" customClass="AddProductViewController" customModule="A2_iOS_penny_101488485" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,7 +239,9 @@
                         <viewLayoutGuide key="safeArea" id="TP2-vW-Hyg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KJc-EN-unK"/>
+                    <navigationItem key="navigationItem" title="Add Product" id="KJc-EN-unK">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="l2p-M3-gSG"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfB-7h-E41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
