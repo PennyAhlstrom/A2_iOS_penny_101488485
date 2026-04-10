@@ -148,7 +148,11 @@
                                 <segue destination="FtF-DP-AIL" kind="show" id="7Ae-dI-X47"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="gyk-S6-whQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="gyk-S6-whQ">
+                            <connections>
+                                <segue destination="p7h-Sb-7d6" kind="presentation" id="evl-Gh-lYD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextButton" destination="DUt-LH-33h" id="SHF-jd-ptd"/>
@@ -234,11 +238,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddProductViewController" id="7sY-Dy-TrW" customClass="AddProductViewController" customModule="A2_iOS_penny_101488485" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K1p-zX-TAp">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="km2-SR-X4T">
-                                <rect key="frame" x="20" y="192" width="353" height="330"/>
+                                <rect key="frame" x="20" y="90" width="353" height="330"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atM-iR-voT">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
@@ -318,7 +322,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p7h-Sb-7d6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="htr-T5-UNC">
-                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <rect key="frame" x="0.0" y="16" width="393" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
